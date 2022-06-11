@@ -1,0 +1,42 @@
+.base-tag {
+  --theme: 0, 0, 0;
+  font-size: 12px;
+  background: rgba(var(--theme), 0.15);
+  color: rgb(var(--theme));
+  padding: 4px 12px;
+  width: fit-content;
+  border-radius: 100vh;
+
+  &.prefix-dot {
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: rgb(var(--theme));
+      display: block;
+      margin-right: 6px;
+      border-radius: 100vh;
+    }
+  }
+
+  &--success {
+    @extend .base-tag;
+    --theme: var(--green-rgb);
+    background-color: #e8f5e9;
+  }
+
+  &--warning {
+    @extend .base-tag;
+    --theme: var(--yellow-rgb);
+    background-color: #fcf7e3;
+  }
+
+  &--error {
+    @extend .base-tag;
+    --theme: var(--red-rgb);
+    background: #feeced;
+  }
+}

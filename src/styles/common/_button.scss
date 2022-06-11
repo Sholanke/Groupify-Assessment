@@ -1,0 +1,33 @@
+.base-btn {
+  background: #fdfdfa;
+  border: 1px solid #dad9d6;
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-out;
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  &.prefix-icon {
+    .base-btn__icon {
+      display: flex;
+      margin-right: 8px;
+    }
+  }
+
+  &.suffix-icon {
+    .base-btn__icon {
+      display: flex;
+      margin-left: 8px;
+    }
+  }
+
+  &--clear {
+    background: transparent;
+    border: none;
+  }
+}

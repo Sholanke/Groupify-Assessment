@@ -1,0 +1,36 @@
+.base-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &.prefix-icon {
+    input {
+      padding-left: 48px;
+    }
+
+    .base-input__icon {
+      position: absolute;
+      left: 16px;
+      pointer-events: none;
+      display: flex;
+    }
+  }
+
+  input {
+    border: 0;
+    border-bottom: 1px solid #dad9d6;
+    background: #fdfdfa;
+    padding: 16px 17px;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:focus {
+      border-bottom: 1px solid;
+    }
+  }
+}

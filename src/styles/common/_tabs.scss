@@ -1,0 +1,27 @@
+.base-tabs {
+  .base-tabs__controls {
+    border-bottom: 1px solid #f4f3ef;
+
+    &__btn {
+      padding: 7px 0;
+      background: transparent;
+      border: none;
+      color: var(--grey);
+      border-bottom: 3px solid transparent;
+      font-weight: 500;
+      margin-right: 40px;
+      line-height: 1.5;
+      transform: translate(0, 1.5px);
+      transition: 0.1s ease-in;
+
+      &[data-active="true"] {
+        color: #000;
+        border-bottom: 3px solid;
+      }
+    }
+  }
+
+  .base-tabs__content {
+    margin-top: 44px;
+  }
+}

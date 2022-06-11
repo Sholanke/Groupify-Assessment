@@ -1,0 +1,191 @@
+@import "../../styles/common/mixin";
+
+.dashboard-page {
+  margin-top: 103px;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  &__amounts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f4f3ef;
+    flex-wrap: wrap;
+  }
+
+  &__amount {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    flex: 1;
+
+    p {
+      color: var(--grey);
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-top: 8px;
+
+      @include mobile {
+        font-size: 34px;
+      }
+    }
+  }
+
+  &__transactions {
+    margin-top: 80px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 44px 0;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
+      h2 {
+        font-size: 20px;
+
+        @include mobile {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__controls {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .base-input {
+          width: 192px;
+
+          @include mobile {
+            flex: 1;
+            max-width: unset;
+          }
+        }
+
+        .base-btn {
+          margin-left: 40px;
+
+          @include mobile {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    &__table {
+      margin-bottom: 80px;
+
+      .base-table__header {
+        td {
+          &:last-of-type {
+            width: 131px;
+          }
+
+          &:nth-child(1) {
+            width: 260px;
+          }
+
+          &:nth-child(3) {
+            width: 360px;
+          }
+
+          &:nth-child(4) {
+            width: 280px;
+          }
+        }
+      }
+
+      &__row {
+        td {
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            @include mobile {
+              width: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard-page__transaction-details {
+    &__icon {
+      height: 144px;
+      width: 144px;
+      border: 1px solid #f4f3ef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100vh;
+      margin: {
+        right: auto;
+        left: auto;
+        top: 48px;
+        bottom: 24px;
+      }
+    }
+
+    &__status {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+
+      &__key,
+      &__value {
+        font-size: 14px;
+      }
+
+      &__key {
+        color: var(--grey);
+      }
+
+      &__value {
+        font-weight: 900;
+      }
+
+      &-wrapper {
+        margin-top: 64px;
+        padding-top: 64px;
+        border-top: 1px solid #f4f3ef;
+      }
+    }
+
+    .base-btn {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  }
+
+  .dashboard-page__transaction-details__receipt {
+    &__image {
+      width: 100%;
+      max-width: 288px;
+      margin: 76px auto;
+      display: block;
+    }
+
+    .base-btn {
+      width: 100%;
+    }
+  }
+}
